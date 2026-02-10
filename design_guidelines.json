@@ -1,0 +1,132 @@
+{
+  "project_name": "ARCHIVIO 1937: LA FABBRICA DEL CONSENSO",
+  "design_philosophy": {
+    "identity": "E1: The Anti-AI Designer",
+    "theme": "Bureaucratic Noir / Soviet Brutalism",
+    "core_concept": "The user is accessing a forbidden archive. The interface is a tool of the state—heavy, industrial, and oppressive, but the content reveals the cracks in the facade.",
+    "emotional_tone": "Oppressive, Secretive, Tense, Revealing",
+    "visual_style": "High Contrast, Grainy, Redacted, Industrial"
+  },
+  "typography": {
+    "primary_font": {
+      "name": "Oswald",
+      "type": "sans-serif",
+      "usage": "Headings, Navigation, Big Numbers",
+      "weights": ["400", "700"],
+      "import_url": "https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap"
+    },
+    "secondary_font": {
+      "name": "Courier Prime",
+      "type": "monospace",
+      "usage": "Body text, 'Classified' documents, Captions, Data",
+      "weights": ["400", "700"],
+      "import_url": "https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap"
+    },
+    "rules": [
+      "HEADINGS: Uppercase, tight tracking (-0.02em), massive sizes for impact.",
+      "BODY: Monospace, comfortable reading size (16px+), high contrast.",
+      "ACCENTS: Use 'stamped' rotation (-2deg or 2deg) for emphasis."
+    ]
+  },
+  "colors": {
+    "palette": {
+      "background": "#0a0a0a",
+      "surface": "#121212",
+      "surface_highlight": "#1E1E1E",
+      "text_primary": "#E5E5E5",
+      "text_secondary": "#A0A0A0",
+      "accent_red": "#D22B2B",
+      "accent_gold": "#C0A080",
+      "border_subtle": "#333333",
+      "border_strong": "#D22B2B"
+    },
+    "usage": {
+      "background": "bg-[#0a0a0a]",
+      "card_bg": "bg-[#121212] border border-[#333333]",
+      "text_main": "text-[#E5E5E5]",
+      "text_muted": "text-[#A0A0A0]",
+      "primary_cta": "bg-[#D22B2B] text-white hover:bg-[#B22222]",
+      "warning_text": "text-[#D22B2B]"
+    }
+  },
+  "layout": {
+    "grid_system": "The 'Bento' Grid Protocol - Mode A (Asymmetry)",
+    "spacing": "Generous. Use p-8 to p-12 for sections. Create 'breathing room' around heavy content.",
+    "container_width": "max-w-7xl mx-auto",
+    "z_index_strategy": "Layered depth. Background textures < Content < Redaction Bars < Modals/Overlays"
+  },
+  "components": {
+    "buttons": {
+      "style": "Sharp edges (rounded-none), uppercase text, 2px border.",
+      "variants": {
+        "primary": "bg-accent_red text-white border-accent_red hover:bg-transparent hover:text-accent_red transition-all duration-300",
+        "secondary": "bg-transparent text-white border-white/20 hover:border-white hover:bg-white/5"
+      }
+    },
+    "cards": {
+      "style": "Flat, dark surface, 1px border. No shadow. 'Dossier' feel.",
+      "hover": "border-accent_red/50 transition-colors duration-300"
+    },
+    "inputs": {
+      "style": "bg-transparent border-b-2 border-white/20 focus:border-accent_red outline-none rounded-none px-0 py-2 font-mono"
+    },
+    "redaction": {
+      "description": "Black bars over text that reveal content on hover.",
+      "css_class": "bg-black text-black hover:bg-transparent hover:text-white transition-all duration-500 cursor-help select-none"
+    }
+  },
+  "visual_enhancers": {
+    "textures": {
+      "grain": "Overlay a fixed noise texture with opacity-5 pointer-events-none mix-blend-overlay",
+      "paper": "Use the 'Dark Crumpled Paper' image as a subtle background blend for the 'Classified' sections."
+    },
+    "effects": {
+      "crt_flicker": "Optional subtle animation for the 'Cine-Analisi' section.",
+      "stamp": "Border-4 border-accent_red text-accent_red font-bold uppercase p-2 rotate-[-12deg] inline-block opacity-80 mix-blend-screen"
+    }
+  },
+  "media": {
+    "images": {
+      "hero_bg": "https://images.unsplash.com/photo-1582136610579-2747d46e066c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAxODF8MHwxfHNlYXJjaHwyfHxvbGQlMjBwYXBlciUyMHRleHR1cmUlMjBncnVuZ2V8ZW58MHx8fHwxNzY5NzcxMzA1fDA&ixlib=rb-4.1.0&q=85",
+      "propaganda_lenin": "https://images.unsplash.com/photo-1549830727-c1c26b45db08?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHxzb3ZpZXQlMjBwcm9wYWdhbmRhJTIwcG9zdGVyJTIwMTkzMHN8ZW58MHx8fHwxNzY5NzcxMzAwfDA&ixlib=rb-4.1.0&q=85",
+      "reality_factory": "https://images.unsplash.com/photo-1576666735179-f3ad352212c2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxzb3ZpZXQlMjBmYWN0b3J5JTIwd29ya2VycyUyMDE5MzBzJTIwYmxhY2slMjBhbmQlMjB3aGl0ZXxlbnwwfHx8fDE3Njk3NzEzMDN8MA&ixlib=rb-4.1.0&q=85",
+      "stalin_statue": "https://images.unsplash.com/photo-1653242803054-49d4df9827c3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w8NTYxODd8MHwxfHNlYXJjaHwzfHxzdGFsaW4lMjBwb3J0cmFpdCUyMGhpc3RvcmljYWx8ZW58MHx8fHwxNzY5NzcxMzAxfDA&ixlib=rb-4.1.0&q=85",
+      "texture_paper": "https://images.unsplash.com/photo-1695037520057-0e9cb68f321d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAxODF8MHwxfHNlYXJjaHwxfHxvbGQlMjBwYXBlciUyMHRleHR1cmUlMjBncnVuZ2V8ZW58MHx8fHwxNzY5NzcxMzA1fDA&ixlib=rb-4.1.0&q=85"
+    },
+    "videos": {
+      "death_of_stalin": "E9eAshaPvYw",
+      "mr_jones": "P7tqF7i9t1U",
+      "burnt_by_sun": "x6t7vT0j4c8"
+    }
+  },
+  "page_specifics": {
+    "homepage": {
+      "layout": "Hero Section with 'Warning' Modal overlay. Background is the dark crumpled paper. Large 'TOP SECRET' stamp animation.",
+      "elements": ["Warning Modal", "Enter Button (Red)", "Hidden 'Easter Egg' text redacted"]
+    },
+    "pravda_vs_realta": {
+      "layout": "Split screen or Slider. Left: Propaganda (Colorful, Heroic). Right: Reality (B&W, Gritty).",
+      "interaction": "Draggable slider to reveal the truth behind the poster."
+    },
+    "cine_analisi": {
+      "layout": "Grid of video cards. Each card looks like a film reel canister or a classified tape.",
+      "elements": ["YouTube Embed", "Analysis Text (Typewriter font)"]
+    },
+    "quiz": {
+      "layout": "Single column, focused. Looks like an interrogation room form.",
+      "elements": ["Question Card", "Radio Options (Checkbox style)", "Result Stamp (SURVIVOR / LIQUIDATED)"]
+    }
+  },
+  "accessibility": {
+    "contrast": "Ensure text is #E5E5E5 on #0a0a0a background (AAA).",
+    "motion": "Respect prefers-reduced-motion. Disable flicker effects if set."
+  },
+  "instructions_to_main_agent": [
+    "1. INSTALL FONTS: Add the Google Fonts imports to index.css immediately.",
+    "2. SETUP TAILWIND: Extend the theme with the colors provided in 'colors.palette'.",
+    "3. CREATE COMPONENTS: Build the 'RedactedText' and 'Stamp' components first as they are key to the identity.",
+    "4. USE SHADCN: Use Shadcn for complex interactions (Slider, Dialog, Accordion) but STRIP their default styling to match the 'Bureaucratic Noir' theme.",
+    "5. NO ROUNDED CORNERS: Force 'rounded-none' or 'rounded-sm' (2px) on everything. No soft UI.",
+    "6. LANGUAGE: Ensure all static text is in Italian as requested."
+  ]
+}
