@@ -2,5 +2,5 @@
   "buildCommand": "bun run build",
   "installCommand": "bun install",
   "devCommand": "bun run start",
-  "framework": "react"
+  "framework": "node"
 }
